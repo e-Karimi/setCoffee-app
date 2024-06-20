@@ -11,7 +11,7 @@ Pages e.g., Home, single product, login, about us, admin panel, cart and half of
 
 **CRUD** operation is in place for products, comments, discounts, users, and tickets.
 
-**Login** and **register** functionality has been implemented in two ways both **password** and **OTP** (one-time password)
+**Login** and **register** functionality have been implemented in two ways both **password** and **OTP** (one-time password)
 
 Some libraries has been used such as React-Hook-Form, Recharts, React-hot-toast, Sweet Alert, AOS, Bcryptjs, JSON Web Token, Swiper, React-Reaflet, React-Select and so on.
 
