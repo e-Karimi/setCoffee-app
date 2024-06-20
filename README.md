@@ -5,6 +5,8 @@ SetCoffee is an online shop for ordering coffee.
 
 Currently, I'm working on this project crafted using **HTML**, **CSS**, **Next.js (for backend and frontend)**.
 
+**MongoDB** has been considered as a Data base.
+
 Pages e.g., Home, single product, login, about us, admin panel, cart and half of user panel developed.
 
 **CRUD** operation is in place for products, comments, discounts, users, and tickets.
