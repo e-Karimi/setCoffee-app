@@ -1,0 +1,60 @@
+"use client";
+import React, { useState } from "react";
+import styles from "./tabs.module.css";
+
+import Description from "./Description";
+import MoreInfoes from "./MoreInfoes";
+import Comments from "./Comments";
+
+const Tabs = ({ product, acceptedComments }) => {
+  const [tab, setTab] = useState("description");
+
+  return (
+    <>
+      <div data-aos="fade-left" className={styles.tabs}>
+        <ul>
+          <li>
+            <button
+              className={tab === "description" ? styles.active_tab : ""}
+              onClick={() => setTab("description")}
+            >
+              توضیحات
+            </button>
+          </li>
+          <li>
+            <button
+              className={tab === "moreInfoes" ? styles.active_tab : ""}
+              onClick={() => setTab("moreInfoes")}
+            >
+              اطلاعات بیشتر
+            </button>
+          </li>
+          <li>
+            <button
+              className={tab === "comments" ? styles.active_tab : ""}
+              onClick={() => setTab("comments")}
+            >
+              نظرات ({acceptedComments?.length})
+            </button>
+          </li>
+        </ul>
+
+        <div className={styles.contents}>
+          <section>
+            {tab === "description" && <Description product={JSON.parse(JSON.stringify(product))} />}
+            {tab == "moreInfoes" && <MoreInfoes product={JSON.parse(JSON.stringify(product))} />}
+            {tab == "comments" && (
+              <Comments
+                productID={product._id}
+                productName={product.name}
+                acceptedComments={JSON.parse(JSON.stringify(acceptedComments))}
+              />
+            )}
+          </section>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Tabs;
